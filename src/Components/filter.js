@@ -1,35 +1,42 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
-import ReactStars from "react-rating-stars-component";
+import StarRatingComponent from 'react-star-rating-component';
+import myIcon from '../icon.png'
 
-const Filter =()=>{
-    return(<Navbar bg="light" expand="lg">
-    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+
+
+const Filter =({titre,rate})=>{
+ 
+    return(
+    <Navbar bg="light" expand="lg">
+   
+    <img href="#home" src={myIcon} style={{width:'60px',height:'60px'}}/>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#link">Link</Nav.Link>
       </Nav>
       <Form inline>
       
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <ReactStars
-    count={5}
-   
-    size={20}
-    edit={true}
-    isHalf={true}
-    emptyIcon={<i className="far fa-star"></i>}
-    halfIcon={<i className="fa fa-star-half-alt"></i>}
-    fullIcon={<i className="fa fa-star"></i>}
-    activeColor="#ffd700"
-  />
-        <Button variant="outline-success">Search</Button>
+      <div className='container-2'>
+      <FormControl
+            type="text"
+            placeholder="Search Contacts"
+            className="prompt"
+            onChange={e=>titre(e.target.value)}
+          />
+           <StarRatingComponent
+              name='star'
+                starCount={5}
+                onStarClick={r=>rate(r)}
+          
+                />   
+              </div>
+              
+              
+       
       </Form>
     </Navbar.Collapse>
   </Navbar>

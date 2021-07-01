@@ -1,34 +1,32 @@
 import React from 'react';
 import Card from "react-bootstrap/Card"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ReactStars from "react-rating-stars-component";
+import ReactStars from "react-star-rating-component";
 import "../App.css"
 
 const MovieCard = (props) => {
   
   return(
+    <div  className='movieCard'>
   
-<Card style={{ width: '18rem' }}>
-<Card.Img variant="top" src={props.myimage}/>
-<Card.Body>
+<Card className='container' style={{ width: '14rem' }}>
+<Card.Img className='image' variant="top" src={props.myimage}/>
+<Card.Body >
+<ReactStars
+    name='star3'
+    starCount={5}
+    editing={false}
+    value={props.stars}
+  />
+<div className='overlay1' >
+  <div className='text'>
   <Card.Title>{props.title}</Card.Title>
-  <Card.Text>
+  <Card.Text >
     {props.text}
   </Card.Text>
-
-  <ReactStars
-    count={5}
-   
-    size={24}
-    edit={false}
-    isHalf={true}
-    emptyIcon={<i className="far fa-star"></i>}
-    halfIcon={<i className="fa fa-star-half-alt"></i>}
-    fullIcon={<i className="fa fa-star"></i>}
-    activeColor="#ffd700"
-  />,
- 
-      
+  </div>
+  </div>   
 </Card.Body>
-</Card>)}
+</Card>
+</div>)}
 export default MovieCard;
