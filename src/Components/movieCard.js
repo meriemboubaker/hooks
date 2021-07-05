@@ -10,7 +10,7 @@ const MovieCard = (props) => {
     <div  className='movieCard'>
   
 <Card className='container' style={{ width: '14rem' }}>
-<Card.Img className='image' variant="top" src={props.myimage}/>
+<Card.Img style={{width:"192px",height:"284.150px"}} className='image' variant="top" src={props.myimage}/>
 <Card.Body >
 <ReactStars
     name='star3'

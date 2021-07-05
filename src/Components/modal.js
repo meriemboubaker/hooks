@@ -53,7 +53,7 @@ console.log(Star)
     <input id="profilePic" type="file" onChange={onChangePicture} />
           
               <div className="previewProfilePic">
-                <img style={{width:"25%"}} className="playerProfilePic_home_tile" src={imgData} />
+                <img style={{width:"192px",height:"284.150px"}} className="playerProfilePic_home_tile" src={imgData} />
               </div>
           
             <div className="fillContentDiv formElement">
