@@ -5,6 +5,7 @@ footer{
   margin: 0;
   text-align: center;
   padding-top:10px;
+  position: static;
   
 }
 main{margin-bottom:50px ;}

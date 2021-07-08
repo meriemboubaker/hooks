@@ -53,4 +53,7 @@ const Filter = ({ titre, rate , modalShow }) => {
     </Navbar>
   );
 };
+
+  
+   
 export default Filter;
