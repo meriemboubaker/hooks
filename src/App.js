@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import MovieList from "./Components/MovieList";
 import MyVerticallyCenteredModal from "./Components/Modal";
 import Filter from "./Components/Filter";
-import { ListOfFilm } from "./Components/filmList";
+
 import "./App.css";
 
-function App() {
-  const [Movies, setMovies] = useState(ListOfFilm);
+function App(props) {
+  const [Movies, setMovies] = useState(props.ListOfFilm);
   const [SearchTerm, setSearchTerm] = useState("");
   const [Rate, setRate] = useState(0);
   const [modal, setModal] = useState(false);
